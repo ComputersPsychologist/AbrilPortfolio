@@ -38,12 +38,37 @@
   color:rgb(227, 227, 227);
   width: 100%;
   font-family: 'neulight';
-  font-size: 1.15rem;
-  font-weight: 100;
+  font-size: 1.05rem;
+  font-weight: 500;
   line-height: 1.40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 1.4rem
+}
+
+.cvButton {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  margin-right: 55%;
+  height: 2.9rem;
+  width: 29%;
+  border: 1.5px solid rgb(251, 251, 251);
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;  
+}
+
+.cvButton span {
+  font-size: .75rem;
+  color: rgb(251, 251, 251);
+  font-family: 'Bosch';
+}
+
+.cvButton img {
+  max-width: 100%;
+  height: 1.1rem;
 }

@@ -38,6 +38,10 @@ export default function SectionAbout() {
           </p>
         </div>
       </div>
+      <div className={styles.cvButton}>
+        <span>VIEW CV</span>
+        <img src="/eye.svg"></img>
+      </div>
     </section>
   )
 }
