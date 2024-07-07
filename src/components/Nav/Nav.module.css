@@ -1,11 +1,17 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 10px 15px;
-  background-color: #000;
-}
+  /* align-items: center; */
+  
+  position: fixed;
+  width: 100vw;
+  height: 3rem;
+  padding: 1rem 12px;
+  background-color: rgb(37, 37, 37);}
 
 .nav a {
   color: #fff;
   text-decoration: none;
+  font-family: 'bosch';
+  font-size: 1.1rem;
 }
