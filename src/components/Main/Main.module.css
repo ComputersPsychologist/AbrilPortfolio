@@ -44,7 +44,7 @@
   font-size: .8rem;
   font-family: 'bosch', sans-serif;
   cursor: pointer;
-  filter: blur(0.7px);
+  filter: blur(0.4px);
   transition: all 0.5s;
   position: relative; 
 }
