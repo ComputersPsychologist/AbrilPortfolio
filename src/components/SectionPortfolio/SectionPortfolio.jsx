@@ -11,6 +11,7 @@ export default function SectionPortfolio () {
       <Marquee
         text={`PERSONAL PORTFOLIO · `} 
         direction={backwardStyle}
+        treshold={0.1}
       />
       <div className={styles.imgCont}>
 

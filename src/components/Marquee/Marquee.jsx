@@ -5,7 +5,9 @@ import useScroll from '@/hooks/useScrollPos';
 
 export default function Marquee({text, direction}) {
   
+  // not customizable, just an evil number
   const treshold = 0.07
+
   const { positionY } = useScroll()
   const [visibleText, setVisibleText] = useState(text)
   const [textCount, setTextCount] = useState(1)

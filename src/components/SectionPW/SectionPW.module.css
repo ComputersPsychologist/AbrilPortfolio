@@ -6,7 +6,11 @@
   margin-bottom: 3rem;
   font-size: 1.6rem;
   font-family: 'bosch';
-  font-weight: 400;
+  font-weight: 500;
+  color: rgb(251,251,251);
+
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
 }
 .gridBook {
   width: 100%;
@@ -44,9 +48,9 @@
 
 .article a {
   position: relative;
-  top: -24%;
-  left: 10%;
-  font-size: 3rem;
+  bottom: 11%;
+  left: 7%;
+  font-size: 1.7rem;
   font-family: 'bosch';
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);  
 }

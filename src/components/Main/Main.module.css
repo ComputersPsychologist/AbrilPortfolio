@@ -25,7 +25,7 @@
 
 .main h1 {
   /* margin-top: 3rem; */
-  font-size: 2.6rem;
+  font-size: 2.7rem;
   margin-bottom: .6rem;
 }
 
@@ -35,7 +35,7 @@
 } 
 
 .contact {
-  margin-top: 2.5rem;
+  margin-top: 1.7rem;
   padding: .75rem 2rem;
   border: 2px solid #ffffff;
   border-radius: 100px;
@@ -44,9 +44,12 @@
   font-size: .8rem;
   font-family: 'bosch', sans-serif;
   cursor: pointer;
-  filter: blur(0.4px);
+  filter: blur(0.1px);
   transition: all 0.5s;
-  position: relative; 
+  position: relative;
+  /* the 2 lines above make a smooth blur */
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
 }
 .contact span {
   z-index: 2; 
