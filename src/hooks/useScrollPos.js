@@ -12,7 +12,7 @@ export default function useScroll() {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  console.log(positionY)
+  // console.log(positionY)
 
   return { positionY };
 }

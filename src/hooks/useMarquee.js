@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import useScroll from "./useScrollPos";
 
-export default function useMarquee() {
 
-  const duration = 1.2;
+// duration unit: seconds.
+export default function useMarquee({duration = 2}) {
+
+  const speed = 200
   const { positionY } = useScroll()
   const [forwardStyle, setForwardStyle] = useState({});
   const [backwardStyle, setBackwardStyle] = useState({});
@@ -15,7 +17,7 @@ export default function useMarquee() {
     },
     back: {
       'right': `${positionY}px`,
-      'transition': 'cubic-bezier(0,0.57,0.56,1) 1.2s' 
+      'transition': `cubic-bezier(0,0.57,0.56,1) ${duration}s` 
     }
   }
   useEffect(() => {

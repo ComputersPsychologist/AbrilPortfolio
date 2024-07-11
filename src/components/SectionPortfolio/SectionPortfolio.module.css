@@ -4,6 +4,16 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 50vh;
+  
+  opacity: 0; 
+  transform: translate3d(150px, 0, 0);
+  transition: opacity 2.5s cubic-bezier(0.4, 0, 0.2, 1), transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inView {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .imgCont {
@@ -22,6 +32,4 @@
   background-repeat: no-repeat;
   background-position-x: 38%, 38%;
   background-position-y: 50%, 50%;
-
-  margin-bottom: 100vh;
 }

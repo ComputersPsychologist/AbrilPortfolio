@@ -11,9 +11,9 @@ export default function SectionAbout() {
     <section className={styles.about} id='holaloko'>
       <div className={styles.titleCont}>
         <h3>I AM ABRIL WAINSTEIN,</h3>
-        <h3 className={styles.h3b}>AKA ABRU.</h3>
+        <h3 className={styles.h3b}>A.K.A ABRU.</h3>
         <h3>BORN IN B.A,</h3>
-        <h3 className={styles.h3b}>LIVING IN ARGY.</h3>
+        <h3 className={styles.h3b}>LIVING IN B.A, ARG.</h3>
       </div>
       <div className={styles.aboutContent}>
         <MotionlessCarousel 

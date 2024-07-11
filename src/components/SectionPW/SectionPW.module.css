@@ -28,6 +28,15 @@
   background-position: top;
   background-size:cover;
   overflow: hidden;
+
+  opacity: 0; 
+  transform: translate3d(150px, 0, 0);
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inView {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .article:hover {
@@ -48,8 +57,8 @@
 
 .article a {
   position: relative;
-  bottom: 11%;
-  left: 7%;
+  bottom: 10%;
+  left: 6%;
   font-size: 1.7rem;
   font-family: 'bosch';
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);  

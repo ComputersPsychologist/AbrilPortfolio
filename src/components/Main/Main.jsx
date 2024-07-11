@@ -7,7 +7,7 @@ export default function Main () {
         <h1>THIS IS ABRIL W. </h1>
         <h2>MODEL / ARTIST</h2>
 
-        <a href="#holaloko">
+        <a href="#footer">
           <div className={styles.contact}>
             <span>
               CONTACT
