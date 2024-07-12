@@ -1,20 +1,30 @@
 import styles from "./SectionAbout.module.css";
 import MotionlessCarousel from "../MotionlessCarousel/MotionlessCarousel";
+import useIntersection from "@/hooks/useIntersection";
 
 export default function SectionAbout() {
 
+  const [elementRef, isIntersecting] = useIntersection({treshold:2})
+  
   let images = []
-
+  
   images = ['/static1.jpg', '/static2.jpg', '/static3.jpg']
 
+  const animation = isIntersecting ? `${styles.animate} ${styles.toPop}` : '' 
+
   return (
-    <section className={styles.about} id='holaloko'>
-      <div className={styles.titleCont}>
-        <h3>I AM ABRIL WAINSTEIN,</h3>
+    <section className={styles.about}>
+      
+      <div
+        className={`${styles.titleCont} ${animation}` }
+        ref={elementRef}
+      >
+        <h3 className={animation}>I AM ABRIL WAINSTEIN,</h3>
         <h3 className={styles.h3b}>A.K.A ABRU.</h3>
         <h3>BORN IN B.A,</h3>
         <h3 className={styles.h3b}>LIVING IN B.A, ARG.</h3>
       </div>
+      
       <div className={styles.aboutContent}>
         <MotionlessCarousel 
           photos={images} 
@@ -38,10 +48,12 @@ export default function SectionAbout() {
           </p>
         </div>
       </div>
+
       <div className={styles.cvButton}>
         <span>VIEW CV</span>
         <img src="/eye.svg"></img>
       </div>
+
     </section>
   )
 }

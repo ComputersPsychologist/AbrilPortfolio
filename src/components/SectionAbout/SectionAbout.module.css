@@ -17,7 +17,36 @@
   font-size: 1.4rem;
   padding-top: 2rem;
   margin-bottom: 5rem;
+  
+  opacity: 0;
 }
+
+.animate {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode:forwards;
+}
+.toPop {
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+}
+@keyframes animate-fade {
+  0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+        
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
 
 .h3b {
   /* text-align: center; */
@@ -39,7 +68,7 @@
 
 .description {
   color:rgb(255, 255, 255);
-  width: 100%;
+  max-width: 65ch;
   font-family: 'neulight', sans-serif;
   font-size: 1.12rem;
   font-weight: 500;
@@ -53,20 +82,19 @@
 }
 
 .cvButton {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   margin-bottom: 4rem;
   margin-left: 1.7rem;
   align-self: flex-start;
-  height: 3.2rem;
+  height: 3rem;
   width: 29%;
-  border: 1px solid rgb(207, 207, 207);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .7rem;  
-  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
+  
   filter: blur(0.7px);
 }
 
