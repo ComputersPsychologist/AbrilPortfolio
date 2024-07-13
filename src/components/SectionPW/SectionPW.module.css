@@ -4,13 +4,10 @@
 }
 .h2 {
   margin-bottom: 3rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: 'bosch';
   font-weight: 500;
   color: rgb(251,251,251);
-
-  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
 }
 .gridBook {
   width: 100%;

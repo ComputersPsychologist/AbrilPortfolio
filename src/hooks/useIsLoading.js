@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useIsLoading() {
+export default function useIsLoading(time) {
   
   const [isLoading, setIsLoading] = useState(true);
 
@@ -11,7 +11,7 @@ export default function useIsLoading() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 1)
+    }, time)
 
     return(() => clearTimeout(timer))
   }, []) 

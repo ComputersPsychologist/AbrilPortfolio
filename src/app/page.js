@@ -11,7 +11,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   
-  const { isLoading, setIsLoading } = useIsLoading()
+  const { isLoading, setIsLoading } = useIsLoading(1)
 
   const cards = [
     { title: 'Buenos Aires', img: '/abril2.jpg' },

@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 10vh;
+  padding-top: 13vh;
   margin-bottom: 5rem;
 }
 
@@ -13,51 +13,23 @@
   flex-direction: column;
   gap: .2rem;
   font-family: 'bosch';
-  width: 85vw;
-  font-size: 1.4rem;
+  width: 100vw;
+  font-size: 1.5rem;
+  padding: 2rem .5rem 0 1.4rem;
   padding-top: 2rem;
-  margin-bottom: 5rem;
-  
-  opacity: 0;
-}
-
-.animate {
-  animation-duration: 0.5s;
-  animation-name: animate-fade;
-  animation-delay: 0.5s;
-  animation-fill-mode:forwards;
-}
-.toPop {
-  animation-name: animate-pop;
-  animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
-}
-@keyframes animate-fade {
-  0% { opacity: 0; }
-100% { opacity: 1; }
-}
-@keyframes animate-pop {
-  0% {
-    opacity: 0;
-    transform: scale(0.5, 0.5);
-  }
-        
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
+  margin-bottom: 30%;
 }
 
 
 .h3b {
-  /* text-align: center; */
-  padding-left: 30%;
+  padding-left: 32%;
 }
 
 .aboutContent {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 1.2rem;
+  padding: 0 .5rem;
 }
 
 .pic {
@@ -68,9 +40,9 @@
 
 .description {
   color:rgb(255, 255, 255);
-  max-width: 65ch;
   font-family: 'neulight', sans-serif;
-  font-size: 1.12rem;
+  /* max-width: 65ch; */
+  font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.2;
   display: flex;
@@ -78,7 +50,6 @@
   justify-content: center;
   align-items: flex-start;
   gap: 1.4rem;
-  filter: blur(0.6px);
 }
 
 .cvButton {
@@ -93,9 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .7rem;  
-  
-  filter: blur(0.7px);
+  gap: .7rem;
 }
 
 .cvButton span {
