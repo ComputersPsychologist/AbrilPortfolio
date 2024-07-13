@@ -8,7 +8,8 @@ export default function Footer () {
           please drop me an email - AVAILABLE NOW.
         </p>
         <div className={styles.imgCont}>
-          <img className={styles.imgBottom} src="/arrow.svg" alt="arrow icon up" />
+          <img className={styles.imgArrow} src="/arrow.svg" alt="arrow icon up" />
+          <img className={styles.imgArrow2} src="/arrow.svg" alt="arrow icon down" />
         </div>
         <h2>SEND AN EMAIL</h2>
     </footer>

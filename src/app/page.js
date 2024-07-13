@@ -7,7 +7,7 @@ import SectionPW from "@/components/SectionPW/SectionPW";
 import SectionPortfolio from "@/components/SectionPortfolio/SectionPortfolio";
 import useIsLoading from "@/hooks/useIsLoading";
 import Preloader from "@/components/Preloader/Preloader";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   
