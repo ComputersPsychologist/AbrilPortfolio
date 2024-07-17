@@ -54,7 +54,7 @@ export default function SpinningWrapper({ text, children }) {
                 placeContent: "center",
                 borderRadius: "50%",
                 perspective: 400,
-                backgroundColor: "rgba(175, 175, 175, 0.196)"
+                backgroundColor: "rgba(220, 220, 220, 0.196)"
             }}
             onMouseMove={handleMouse}
     >
@@ -76,6 +76,7 @@ export default function SpinningWrapper({ text, children }) {
         {/* Mouse Tracking */}
         <motion.div
             ref={circleRef}
+            className={styles.outterCircle}
             style={{
               width: "65%",
               height: "65%",

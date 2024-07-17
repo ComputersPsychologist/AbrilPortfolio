@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 28vh;
+  margin-bottom: 22vh;
   
   opacity: 0; 
   transform: translate3d(300px, 0, 0);
@@ -23,12 +23,12 @@
   justify-content: center;
   align-items: center;
   background-image: 
-  linear-gradient(rgba(0, 0, 0, .5),
-  rgba(0, 0, 0, .5)), 
-  url('../../assets/images/portfolio.jpg');
-  filter: grayscale();
-  background-size: 100%, cover;
+  linear-gradient(rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.605)), 
+  url('../../assets/images/portfolio800x1200.jpg');
+  filter:contrast(1.15) grayscale();
+  background-size: cover, 150%;
   background-repeat: no-repeat;
-  background-position-x: 38%, 38%;
-  background-position-y: 50%, 50%;
+  background-position-x: 48%, 48%;
+  background-position-y: 100%, 100%;
 }
