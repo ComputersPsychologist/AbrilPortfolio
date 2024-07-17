@@ -30,10 +30,11 @@
 }
 
 .innerCircle {
-  width: 65%;
+  /* USED IN JSX (motion-div) */
+  /* width: 65%;
   height: 65%;
   border-radius: 50%;
-  background-color: aliceblue;
+  background-color: aliceblue; */
 }
 
 .innerCircle :first-child {
