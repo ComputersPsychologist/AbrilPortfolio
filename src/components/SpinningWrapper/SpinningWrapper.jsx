@@ -1,14 +1,19 @@
 import styles from './SpinningWrapper.module.css';
 import { motion, useMotionValue, useTransform, useMotionTemplate } from "framer-motion";
-import { useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useRef, useEffect, useState } from 'react';
 
 export default function SpinningWrapper({ text, children }) {
 
-  // Spinning 
+  // Text spinning & Mouse tracking are nested
+  // split them it's a waste of time 
+
+  // Spinning ->
   const length = text.length;
   const deg = 360 / length;
 
-  //MouseTracker
+  //MouseTracker ->
+
   const x = useMotionValue(200);
   const y = useMotionValue(200);
 
@@ -22,7 +27,8 @@ export default function SpinningWrapper({ text, children }) {
     y.set(event.clientY - rect.top);
   }
 
-  // Dynamic Shadow
+  // Dynamic Shadow ->
+
   const circleRef = useRef(null);
 
   const shadowSizeX = useTransform(x, [0, 400], [10, 0]);
@@ -40,12 +46,24 @@ export default function SpinningWrapper({ text, children }) {
     updateShadow();
   }, [shadowSizeX, shadowSizeY]);
 
-  // Text spinning & Mouse tracking has been mixed
-  // split them it's a waste of time 
+  // Shake + navigate transition ->
 
+  const router = useRouter()
+  
+  const [clicked, click] = useState(false)
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    click(true)
+    setTimeout(() => {
+      click(false)
+      router.push('/porfolio')
+    } , 700)
+  }
+  
   return (
     <motion.div
-            className={styles.tracker}
+            className={`${styles.tracker} ${clicked ? styles.shake : ''}`}
             style={{
                 width: "500px",
                 height: "500px",
@@ -55,6 +73,7 @@ export default function SpinningWrapper({ text, children }) {
                 borderRadius: "50%",
                 perspective: 400,
                 backgroundColor: "rgba(220, 220, 220, 0.196)"
+                
             }}
             onMouseMove={handleMouse}
     >
@@ -74,9 +93,11 @@ export default function SpinningWrapper({ text, children }) {
         </div>
 
         {/* Mouse Tracking */}
+      
         <motion.div
             ref={circleRef}
-            className={styles.outterCircle}
+            className={`${styles.outterCircle} ${clicked ? styles.shake : ''}`}
+            onClick={handleClick}
             style={{
               width: "65%",
               height: "65%",
@@ -91,7 +112,7 @@ export default function SpinningWrapper({ text, children }) {
               {children}
           </div>
         </motion.div>
-      
+        
       </div>
 
     </motion.div>

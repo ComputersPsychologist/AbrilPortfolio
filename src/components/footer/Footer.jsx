@@ -1,6 +1,6 @@
 import useIntersection from "@/hooks/useIntersection"
 import styles from "./Footer.module.css"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 export default function Footer ({mail, face, insta, linked}) {
 
@@ -12,7 +12,6 @@ export default function Footer ({mail, face, insta, linked}) {
   }
 
   const [elementRef, isIntersecting] = useIntersection()
-  
 
   return (
     <footer className={`${styles.footer} ${isIntersecting ? styles.inView : '' }`} ref={elementRef} id="footer">
@@ -25,7 +24,9 @@ export default function Footer ({mail, face, insta, linked}) {
             <img className={styles.imgArrow} src="/arrow.svg" alt="arrow icon up" />
             <img className={styles.imgArrow2} src="/arrow.svg" alt="arrow icon down" />
           </div>
-          <a href={data.email}><h2>SEND AN EMAIL</h2></a>
+          <a href={data.email}>
+            <h2>SEND AN EMAIL</h2>
+          </a>
         </div>
         <div className={styles.credits}>
           <div>
