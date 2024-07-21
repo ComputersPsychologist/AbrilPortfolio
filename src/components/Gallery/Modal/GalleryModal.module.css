@@ -1,0 +1,28 @@
+.modal {
+  max-width: 80%;
+  background-color: white;
+  z-index: 999999;
+}
+
+.notVisible {
+  display: none;
+}
+.visible {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.blackOut {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.911);
+  position: fixed;
+  z-index: 999998;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
