@@ -9,7 +9,7 @@
 .credits {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin: 6.4rem 0 1.2rem 0 ;
   padding: 0 .75%;
@@ -19,7 +19,7 @@
 }
 
 .credits div {
-  width: 33.3vw;
+  /* width: 33.3vw; */
   text-align: center;
 }
 
@@ -29,12 +29,12 @@
 
 .webDev {
   display: flex;
-  flex-direction: column;
+  gap: .3rem;
   align-items: flex-end;
 }
 
 .webDev img {
-  align-self: flex-end;
+  align-self: center;
 }
 
 .credits a {

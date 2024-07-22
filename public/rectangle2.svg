@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 61" width="284" height="61">
+	<title>rectangle-svg</title>
+	<defs>
+		<image  width="84" height="7" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAHAQMAAACsv/jbAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAiYmJNaaBRgAAAAJ0Uk5TAP9bkSK1AAAAFElEQVR4nGOsb2CAgo+MlLAZEAAALmYLqP74c68AAAAASUVORK5CYII="/>
+		<image  width="84" height="7" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAHAQMAAACsv/jbAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAiYmJNaaBRgAAAAJ0Uk5TAP9bkSK1AAAAFElEQVR4nGOsb2CAgo+MlLAZEAAALmYLqP74c68AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #fbfbfb } 
+	</style>
+	<path id="Layer" class="s0" d="m0.4 0.9h283.1l-31.1 46.6c-5.6 8.3-15 13.4-25 13.4h-170.9c-10 0-19.4-5.1-25-13.4z"/>
+	<use id="Shape 2" href="#img1" x="100" y="19"/>
+	<use id="Shape 2 copy" href="#img2" x="100" y="34"/>
+</svg>

@@ -6,9 +6,11 @@ export default function SectionAbout() {
 
   const [elementRef, isIntersecting] = useIntersection({treshold:2})
   
-  let images = []
-  
-  images = ['/static1.jpg', '/static2.jpg', '/static3.jpg']
+  const images = [
+    '/static1.jpg',
+    '/static2.jpg',
+    '/static3.jpg',
+  ]
 
   const animation = isIntersecting ? `${styles.animate} ${styles.toPop}` : '' 
 
@@ -28,7 +30,7 @@ export default function SectionAbout() {
       <div className={styles.aboutContent}>
         <MotionlessCarousel 
           photos={images} 
-          interval={500}
+          interval={1000}
         />
         <div className={styles.description}>
           <p>
@@ -46,13 +48,14 @@ export default function SectionAbout() {
           <p>
             Currently working on a new collection of paintings that will be released in 2024.
           </p>
+          <div className={styles.cvButton}>
+            <span>VIEW CV</span>
+            <img src="/eye.svg"></img>
+          </div>
+
         </div>
       </div>
 
-      <div className={styles.cvButton}>
-        <span>VIEW CV</span>
-        <img src="/eye.svg"></img>
-      </div>
 
     </section>
   )

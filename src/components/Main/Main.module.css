@@ -12,16 +12,14 @@
   border-top: 0;
   border-bottom: 0; */
   background-image: 
-  linear-gradient(
-    to bottom, 
-    rgba(0, 0, 0, 0.625) 0%, 
-    rgba(0, 0, 0, 0.562) 100%),
-    url('../../assets/images/DSC0343a.jpg');
-  
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0.625) 0%, 
+      rgba(0, 0, 0, 0.562) 100%),
+      url('../../assets/images/main.jpg');
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position-x: 70%;
-  background-position-y: 0px;
+  background-size: 100% auto;
+  background-position: 0 65%;
 }
 
 .main h1, .main h2 {
@@ -75,4 +73,32 @@
   bottom: 2.3%;
   font-size: .58rem;
   font-weight: 100;
+}
+
+/* small devices (vertical tablets) */
+@media (min-width: 768px) {
+  
+}
+
+/* medium devices (horizontal tablet) */
+@media (min-width: 1024px) {
+ 
+}
+
+/* Laptop Screen */
+@media (min-width: 1280px) {
+ 
+}
+
+/* PC Screen (desktop) */
+@media (min-width: 1536px) {
+  
+  .main {
+    padding-top: 0%;
+    height: 100vh;
+  }
+  .main h1 {
+    font-size: 7.5rem;
+    margin-bottom: .7rem;
+  }
 }

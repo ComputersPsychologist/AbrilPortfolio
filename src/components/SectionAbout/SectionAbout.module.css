@@ -32,16 +32,9 @@
   padding: 0 .5rem;
 }
 
-.pic {
-  aspect-ratio: 7,2 / 9;
-  max-width: 30%;
-  height: auto;
-}
-
 .description {
   color:rgb(255, 255, 255);
   font-family: 'neulight', sans-serif;
-  /* max-width: 65ch; */
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.2;
@@ -51,6 +44,7 @@
   align-items: flex-start;
   gap: 1.4rem;
 }
+/* max-width: 65ch; */
 
 .cvButton {
   margin-top: 3.5rem;
@@ -76,4 +70,79 @@
 .cvButton img {
   max-width: 100%;
   height: 1.1rem;
+}
+
+/* small devices (vertical tablets) */
+@media (min-width: 768px) {
+  
+}
+
+/* medium devices (horizontal tablet) */
+@media (min-width: 1024px) {
+ 
+}
+
+/* Laptop Screen */
+@media (min-width: 1280px) {
+ 
+}
+
+/* PC Screen (desktop) */
+@media (min-width: 1536px) {
+  .about {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .titleCont {
+    padding-top: 4.5rem;
+    font-family: 'bosch';
+    font-size: 550%;
+    width: 65%;
+    margin-bottom: 3%;
+  }
+  
+  .h3b {
+    text-align: end;
+    padding-left: 0%;
+  }
+  
+  .aboutContent {
+    gap: 9.5rem;
+    width: 100%;
+    padding: 2rem;
+    font-family: 'neu';
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-family: 'neulight';
+    font-size: 1.85rem;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .cvButton {
+    margin-top: 3.5rem;
+    margin-bottom: 4rem;
+    margin-left: 1.7rem;
+
+    height: 4rem;
+    width: 15%;
+    gap: .5rem;
+  }
+  
+  .cvButton span {
+    font-size: .95rem;
+  }
+  
+  .cvButton img {
+    max-width: 100%;
+    height: 1.6rem;
+  }
 }

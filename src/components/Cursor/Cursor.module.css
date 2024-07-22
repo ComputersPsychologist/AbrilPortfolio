@@ -1,0 +1,39 @@
+.cursor {
+  z-index: 999999;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  filter: hue-rotate(180deg);
+  transition: width .3s, height .3s, opacity .3s;
+}
+.click {
+  z-index: 999999;
+  width: 55px;
+  height: 55px;
+  opacity: .5;
+  border-style: outset;
+  border-radius: 50%;
+  /* box-shadow:  0px 0px 12px 0.75px teal; */
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+}
+.hover {
+  z-index: 999999;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  filter: hue-rotate(180deg);
+  transition: width .3s, height .3s, opacity .3s;
+}

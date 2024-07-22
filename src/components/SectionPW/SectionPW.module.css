@@ -75,3 +75,21 @@
 .article:hover a::after {
   width: 100%;
 }
+
+
+
+/* PC Screen (desktop) */
+@media (min-width: 1536px) {
+
+  .section {
+    margin-top: 5rem;
+    width: 94vw;
+  }
+  .gridBook {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .h2 {
+    font-size: 3.9rem;
+
+  }
+}

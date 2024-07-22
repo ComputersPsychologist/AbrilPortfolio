@@ -49,8 +49,9 @@ export default function Footer ({mail, face, insta, linked}) {
           <div>ABRIL <br />WAINSTEIN ® 2024</div>
 
           <div className={styles.webDev}>
+            <span>WEB</span>
             <img className={styles.icon} src="/ie.gif" alt="developer website" />
-            <span>WEB DEVELOPER</span>
+            <span>DEV</span>
           </div>
 
         </div>

@@ -1,34 +1,44 @@
-'use client'
-import Image from "next/image"
-import styles from "./MotionlessCarousel.module.css"
-import { useState, useRef, useEffect } from "react"
+import React, { useState, useEffect, useRef } from 'react';
+import styles from './MotionlessCarousel.module.css';
 
-export default function MotionlessCarousel({ photos, interval = 1000 }) {
-
-  const [imageIndex, setImageIndex] = useState(0)
-  const indexRef = useRef(0)
+const MotionlessCarousel = ({photos, interval}) => {
+  const images = photos
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderContainerRef = useRef(null);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      indexRef.current = (indexRef.current + 1) % photos.length
-      setImageIndex(indexRef.current)
-    }, interval)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, interval);
 
-    return () => clearInterval(intervalId)
-  }, [photos, interval])
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    const container = sliderContainerRef.current;
+    const img = container.querySelector('img');
+    if (img) {
+      const aspectRatio = img.naturalWidth / img.naturalHeight;
+      container.style.paddingBottom = `${(1 / aspectRatio) * 100}%`;
+    }
+  }, []);
 
   return (
-    <div className={styles.carousel}>
-      {photos.map((photo, index) => (
-        <Image
-          key={index}
-          src={photo}
-          alt={'abril wainstein photo'}
-          style={{ display: imageIndex === index ? 'block !important' : 'none !important' }}
-          width={300}
-          height={400}
-        />
-      ))}
+    <div className={styles.slider}>
+      <div className={styles.sliderContainer} ref={sliderContainerRef}>
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Imagen ${index + 1}`}
+            className={`${styles.image} ${
+              index === currentIndex ? styles.active : ''
+            }`}
+          />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default MotionlessCarousel;

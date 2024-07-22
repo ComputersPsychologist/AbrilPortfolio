@@ -1,3 +1,36 @@
-.carousel {
+.slider {
   display: none;
+}
+
+/* PC Screen (desktop) */
+@media (min-width: 1536px) {
+  .slider {
+    display: block;
+    width: 68vw; 
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    padding-left: 1.2rem;
+  }
+  
+  .sliderContainer {
+    position: relative;
+    width: 100%;
+    padding-top: 35% /* aspect ratio control */
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .active {
+    opacity: 1;
+  }
 }
