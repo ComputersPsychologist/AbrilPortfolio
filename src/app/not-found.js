@@ -19,7 +19,6 @@ export default function NotFoundPage() {
   return (
     <div className={`${styles.cont404} ${styles.fadeIn}`}>
       <h3 className={styles.fadeIn}>PAGE NOT FOUND</h3>
-      <h3 className={styles.fadeIn}>˅</h3>
       <img src="/bongo-cat-96.png" alt="" />
     </div>
   )

@@ -28,14 +28,31 @@ export default function Footer ({mail, face, insta, linked}) {
             <h2>SEND AN EMAIL</h2>
           </a>
         </div>
+
         <div className={styles.credits}>
-          <div>
-            <a href={data.ig}><span>INSTAGRAM</span></a>  
-            <a href={data.fb}><span>FACEBOOK</span></a>
-            <a href={data.linkedin}><span>LINKDEIN</span></a>
+
+          <div className={styles.iconCont}>
+            <a href={data.ig}>
+              <img className={styles.icon} src="/ig.gif" alt="" />
+              <span>INSTAGRAM</span>
+            </a>  
+            <a href={data.fb}>
+              <img className={styles.icon} src="/fb.gif" alt="" />
+              <span>FACEBOOK</span>
+            </a>
+            <a href={data.linkedin}>
+              <img className={styles.icon} src="/ie.gif" alt="" />
+              <span>LINKDEIN</span>
+            </a>
           </div>
+
           <div>ABRIL <br />WAINSTEIN ® 2024</div>
-          <div className={styles.webDev}>WEB DEVELOPER</div>
+
+          <div className={styles.webDev}>
+            <img className={styles.icon} src="/ie.gif" alt="developer website" />
+            <span>WEB DEVELOPER</span>
+          </div>
+
         </div>
     </footer>
   )

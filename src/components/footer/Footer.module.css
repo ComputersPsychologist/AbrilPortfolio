@@ -1,9 +1,50 @@
 .footer {
+  /* margin-top: 2rem; */
   width: 96vw;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+}
+
+.credits {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6.4rem 0 1.2rem 0 ;
+  padding: 0 .75%;
+  font-family: 'bosch';
+  font-size: .82rem;
+  line-height: .8rem;
+}
+
+.credits div {
+  width: 33.3vw;
+  text-align: center;
+}
+
+.credits :first-child {
+  text-align: start;
+}
+
+.webDev {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.webDev img {
+  align-self: flex-end;
+}
+
+.credits a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.credits a span {
+  display: flex;
+  flex-direction: column;
 }
 
 .emailCont {
@@ -38,6 +79,16 @@
   height: 50px;
   overflow: hidden;
   margin: .30rem 0;
+}
+
+.icon {
+  max-width: 1.2rem;
+  filter:invert();
+}
+.iconCont a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 /* -------------- ARROW ANIMATION ------------------*/
@@ -81,41 +132,6 @@
     transform: translate3d(0%, -100%, 0); 
     opacity: 0; 
   }
-}
-
-.credits {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 6.4rem 0 1.7rem 0 ;
-  padding: 0 .75%;
-  font-family: 'bosch';
-  font-size: .82rem;
-  line-height: .8rem;
-}
-
-.credits div {
-  width: 33.3vw;
-  text-align: center;
-}
-
-.credits :first-child {
-  text-align: start;
-}
-
-.webDev {
-  text-align: end !important;
-}
-
-.credits a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.credits a span {
-  display: flex;
-  flex-direction: column;
 }
 
 /* ENTRANCE ANIMATION */
@@ -181,3 +197,53 @@
   color: #ffffff;
 }
 
+/* ---------- MEDIA QUERIES ------------- */
+
+/* small devices (vertical tablets) */
+@media (min-width: 768px) {
+  .emailCont p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  .imgCont {
+    height: 5rem;
+  }
+  .emailCont h2 {
+    font-size: 2.5rem;
+  }
+  .credits div {
+    font-size: 1.2rem;
+    line-height: 1.3rem;  
+  }
+  .icon {
+    max-width: 1.4rem;
+  }
+}
+
+/* Laptop Screen */
+@media (min-width: 1280px) {
+  .imgCont {
+    height: 6rem;
+  }
+}
+
+/* PC Screen (desktop) */
+@media (min-width: 1536px) {
+
+  .emailCont p {
+    width: 45vw;
+    font-size: 1.4rem;
+  }
+
+  .emailCont h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .credits div {
+    font-size: 1rem;
+    line-height: 1.1rem;  
+  } 
+  .icon {
+    max-width: 1.2rem;
+  }
+}

@@ -13,6 +13,6 @@ export default function Page () {
   ]
   
   return (
-    <Gallery title={"Ciudad Autómata"} images={imageCollection} />
+    <Gallery title={"Ciudad Automata"} images={imageCollection} />
   )
 }

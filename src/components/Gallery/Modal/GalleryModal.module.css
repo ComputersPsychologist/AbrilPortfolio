@@ -1,7 +1,22 @@
+.blackOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.911);
+  position:fixed;
+  z-index: 999998;
+  top: 0;
+  left:0;
+}
 .modal {
-  max-width: 80%;
+  /* max-width: 80%; */
   background-color: white;
+  border: 2px solid rgb(0, 0, 0);
+  outline: 4px solid rgb(255, 255, 255);
   z-index: 999999;
+  position: fixed;
 }
 
 .notVisible {
@@ -13,16 +28,9 @@
   align-items: center;
 }
 
-.blackOut {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.911);
-  position: fixed;
-  z-index: 999998;
-}
 
 .modal img {
-  max-width: 100%;
+  max-width: 96vw;
   height: auto;
   user-select: none;
 }

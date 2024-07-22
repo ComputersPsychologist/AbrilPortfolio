@@ -34,7 +34,12 @@ export default function Home() {
               <SectionAbout />
               <SectionPW articles={cards} />
               <SectionPortfolio />
-              <Footer />
+              <Footer 
+                insta={''}
+                mail={''}
+                face={''}
+                linked={''}
+              />
             </>
           )
       }
